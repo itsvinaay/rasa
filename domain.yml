@@ -1,0 +1,12 @@
+version: "3.1"
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hello! Nice to meet you!"
+  - text: "Hi there! How can I help?"
+
+  utter_goodbye:
+  - text: "Bye bye!"
+  - text: "See you later!"
+  - text: "Goodbye!"
