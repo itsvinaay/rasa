@@ -1,5 +1,11 @@
 version: "3.1"
 
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -10,3 +16,7 @@ responses:
   - text: "Bye bye!"
   - text: "See you later!"
   - text: "Goodbye!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
