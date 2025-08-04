@@ -6,17 +6,19 @@ services:
       - "5005:5005"
     volumes:
       - ./models:/app/models
-    command: 
+    command:
       - run
       - --enable-api
       - --cors
       - "*"
       - --debug
       - --model
-      - models/model.tar.gz
+      - /app/models/model.tar.gz
+    environment:
+      - PORT=5005
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5005/health"]
       interval: 30s
       timeout: 10s
-      retries: 3
-      start_period: 40s
+      retries: 5
+      start_period: 60s
